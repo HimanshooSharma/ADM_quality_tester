@@ -1,1 +1,1 @@
-# ADM Assignmnets : Quality Tester
+# ADM Assignments : Quality Tester
