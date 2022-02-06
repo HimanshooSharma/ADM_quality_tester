@@ -3,7 +3,17 @@ from numpy.linalg import matrix_power
 
 
 def calculate_n_steps_with_discretization(Q, pi_zero, n, delta_t):
-    #TODO: Add docstring
+    """A function for calculating the probability vector after n steps
+
+    Args:
+        Q (2D numpy array): The generator matrix
+        pi_zero (1D numpy array): The initial probability vector
+        n (int): The number of steps
+        delta_t (int): The discreetization step
+
+    Returns:
+        1D numpy array: Probability vector after n steps
+    """
 
     # Intializing the identity matrix I
     I = np.array([[1, 0], [0, 1]])
@@ -15,7 +25,16 @@ def calculate_n_steps_with_discretization(Q, pi_zero, n, delta_t):
 
 
 def calculate_steady_state(Q, pi, delta_t):
-    #TODO: Add docstring
+    """A function to calculate the steady state of ctmc
+
+    Args:
+        Q (2D numpy array)): The genrator matrix
+        pi (1D numpy array): The probability vector
+        delta_t (int): The discreetization step
+
+    Returns:
+        1D numpy arrray: Probability vector in steady state
+    """
 
     # Intializing the identity matrix I
     I = np.array([[1, 0], [0, 1]])
@@ -34,7 +53,7 @@ def calculate_steady_state(Q, pi, delta_t):
     return next_pi
 
 
-generator_matrix = np.array([[-0.33, 0.5], [0.33, -0.5]]) #TODO: Add explanation
+generator_matrix = np.array([[-0.33, 0.5], [0.33, -0.5]])
 
 initial_pi = np.array([1, 0])  ## Source 0 is active
 
